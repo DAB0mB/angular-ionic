@@ -1,0 +1,29 @@
+{
+  "name": "angular-ionic",
+  "version": "0.0.1",
+  "description": "Ionic's ng-components pack",
+  "main": "dist/angular-ionic.js",
+  "url": "git://github.com/DAB0mB/angular-ionic.git",
+  "keywords": [
+    "angular",
+    "ionic",
+    "angular-ionic"
+  ],
+  "scripts": {
+    "build:dist": "webpack --progress --config webpack/dist.js",
+    "build:prod": "webpack --progress --config webpack/prod.js --optimize-minimize",
+    "build": "npm run build:dist && npm run build:prod",
+    "prepublish": "npm run build"
+  },
+  "peerDependencies": {
+    "angular": "1.4.3",
+    "angular-animate": "1.4.3",
+    "angular-sanitize": "1.4.3",
+    "angular-ui-router": "0.2.13"
+  },
+  "devDependencies": {
+    "ionic-sdk": "1.2.4",
+    "lodash": "^3.10.1",
+    "webpack": "^1.12.9"
+  }
+}
